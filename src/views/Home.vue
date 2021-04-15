@@ -1,18 +1,82 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <v-container
+      fill-height
+      fluid
+      style="background-color: #02bdd4"
+      pt-12
+      pb-8
+      px-8
+    >
+      <v-row align="center">
+        <v-col cols="12" md="6">
+          <v-row justify="center"
+            ><v-img :src="require('../assets/title.png')" contain> </v-img>
+          </v-row>
+          <v-row justify="center">
+            <v-col cols="12">
+              <p
+                class="text-center text-md-h5 text-sm-h6 text-body-1 white--text font-weight-bold pt-5"
+              >
+                雑学が身につくアプリ
+              </p>
+              <p
+                class="text-center text-md-h5 text-sm-h6 text-body-1 font-weight-bold white--text"
+              >
+                自分だけの最短ルートを見つけろ！
+              </p>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="6">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.yasaidev.wiki_jump_game&pageId=104536201648276872752&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              >
+                <v-img
+                  contain
+                  :height="$vuetify.breakpoint.xsOnly ? 40 : 60"
+                  :src="require('../assets/googleplay.png')"
+                ></v-img
+              ></a>
+            </v-col>
+            <v-col cols="6">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.yasaidev.wiki_jump_game&pageId=104536201648276872752&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              >
+                <v-img
+                  contain
+                  :height="$vuetify.breakpoint.xsOnly ? 40 : 60"
+                  :src="require('../assets/appstore.png')"
+                ></v-img>
+              </a>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-row justify="center"
+            ><v-img
+              :src="require('../assets/screenshot.png')"
+              contain
+              max-height="600"
+            >
+            </v-img>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+    <HomeContent class="pt-8"></HomeContent>
   </div>
 </template>
 
 <script>
+import HomeContent from "@/components/HomeContent";
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  components: { HomeContent },
+};
 </script>
+
+<style scoped>
+</style>
