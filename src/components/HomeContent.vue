@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2 class="text-md-h2 text-h4 black--text text-center">作者</h2>
-    <h3 class="text-md-h4 text-h6 black--text text-center pt-4">電気野菜</h3>
+    <h2 class="text-md-h3 text-h4 black--text text-center">作者</h2>
+    <h3 class="text-md-h5 text-h6 black--text text-center pt-4">電気野菜</h3>
     <div class="pb-10">
       <ul>
         <li
