@@ -2,8 +2,27 @@
   <v-app>
     <v-main>
       <router-view />
-      <router-view name="Home" />
     </v-main>
+    <v-footer dark padless>
+      <v-card class="flex" flat tile>
+        <v-card-title class="cyan darken-2">
+          <strong class="subheading">電気野菜のリンクたち</strong>
+
+          <v-spacer></v-spacer>
+
+          <a :href="item.url" v-for="item in icons" :key="item.icon">
+            <v-icon size="24px" class="mx-4"> {{ item.icon }}</v-icon></a
+          >
+        </v-card-title>
+
+        <v-card-text class="py-2 white--text text-center">
+          {{ new Date().getFullYear() }} — <strong>YasaiDev</strong>
+          <h1 class="text-body-2 white--text text-center">
+            ウィキペディア最短到達ゲーム
+          </h1>
+        </v-card-text>
+      </v-card>
+    </v-footer>
   </v-app>
 </template>
 
@@ -14,7 +33,13 @@ export default {
   components: {},
 
   data: () => ({
-    //
+    icons: [
+      { icon: "mdi-twitter", url: "https://twitter.com/YasaiDev" },
+      {
+        icon: "mdi-youtube",
+        url: "https://www.youtube.com/channel/UCPF7iypT3fMEjOd4h-iQUrQ",
+      },
+    ],
   }),
 };
 </script>

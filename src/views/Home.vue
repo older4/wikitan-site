@@ -64,7 +64,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <HomeContent class="pt-8"></HomeContent>
+    <HomeContent class="pt-8" :SNS_Links="icons"></HomeContent>
   </div>
 </template>
 
@@ -74,6 +74,22 @@ import HomeContent from "@/components/HomeContent";
 
 export default {
   name: "Home",
+  data: () => ({
+    icons: [
+      {
+        icon: "mdi-twitter",
+        url: "https://twitter.com/YasaiDev",
+        name: "@YasaiDev",
+        color: "blue",
+      },
+      {
+        icon: "mdi-youtube",
+        url: "https://www.youtube.com/channel/UCPF7iypT3fMEjOd4h-iQUrQ",
+        name: "電気野菜チャンネル",
+        color: "red",
+      },
+    ],
+  }),
   components: { HomeContent },
 };
 </script>
