@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="350" min-width="200" outlined>
+  <v-card class="mx-auto" max-width="500" min-width="200" outlined>
     <v-carousel height="auto" :hide-delimiters="true">
       <v-carousel-item v-for="(item, index) in howtoplay" :key="index">
         <v-sheet height="100%">

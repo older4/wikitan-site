@@ -71,7 +71,7 @@
           <h2 class="text-md-h3 text-h4 black--text text-center">遊び方</h2>
         </v-col>
       </v-row>
-      <v-row class="pb-8">
+      <v-row class="pb-8 px-4">
         <HowToPlay></HowToPlay>
       </v-row>
       <v-row align-content="center">
