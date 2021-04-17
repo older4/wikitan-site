@@ -1,21 +1,42 @@
 <template>
   <div>
-    <h2 class="text-md-h3 text-h4 black--text text-center">作者</h2>
-    <h3 class="text-md-h5 text-h6 black--text text-center pt-4">電気野菜</h3>
-    <div class="pb-10">
-      <ul>
-        <li
-          v-for="item in this.SNS_Links"
-          :key="item.icon"
-          class="text-center text-body-1 black--text"
-        >
-          <a :href="item.url" class="text-decoration-none">
-            <v-icon size="24px" :color="item.color"> {{ item.icon }}</v-icon
-            >{{ item.name }}</a
-          >
-        </li>
-      </ul>
-    </div>
+    <v-container fluid>
+      <v-row align-content="center">
+        <v-col>
+          <h2 class="text-md-h3 text-h4 black--text text-center">作者</h2>
+        </v-col>
+      </v-row>
+
+      <v-row class="pt-4 pb-8">
+        <v-card class="mx-auto" max-width="350" outlined min-width="150">
+          <div class="d-flex flex-no-wrap justify-space-between">
+            <div>
+              <v-card-title primary-title class="pb-0"> 電気野菜 </v-card-title>
+              <a
+                :href="item.url"
+                v-for="item in this.SNS_Links"
+                :key="item.icon"
+                class="text-body-1 black--text pt-0"
+                cols="12"
+                ><v-card-text class="text--primary py-0"
+                  ><v-icon size="24px" :color="item.color">
+                    {{ item.icon }}</v-icon
+                  >{{ item.name }}</v-card-text
+                ></a
+              >
+            </div>
+            <v-avatar class="ma-3" size="125" tile>
+              <v-img
+                contain
+                :src="require('../assets/avatar.jpg')"
+                class="mx-auto"
+              >
+              </v-img>
+            </v-avatar>
+          </div>
+        </v-card>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -24,7 +45,7 @@ export default {
   name: "HomeContent",
   props: {
     SNS_Links: {
-      type: Object,
+      type: Array,
       required: true,
     },
   },
