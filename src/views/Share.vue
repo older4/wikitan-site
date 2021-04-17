@@ -96,7 +96,7 @@ export default {
       this.endword = this.$route.query.end;
       this.lo = this.$route.query.lo;
     } else {
-      // this.$router.push("/");
+      this.$router.push("/");
     }
   },
 };
