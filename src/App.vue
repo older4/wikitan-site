@@ -6,7 +6,7 @@
     <v-footer dark padless>
       <v-card class="flex" flat tile>
         <v-card-title class="cyan darken-2">
-          <strong class="subheading">電気野菜のリンクたち</strong>
+          <strong class="subheading">電気野菜</strong>
 
           <v-spacer></v-spacer>
 
@@ -16,7 +16,7 @@
         </v-card-title>
 
         <v-card-text class="py-2 white--text text-center">
-          {{ new Date().getFullYear() }} — <strong>YasaiDev</strong>
+          {{ new Date().getFullYear() }} — <strong>YasaiDev/電気野菜</strong>
           <h1 class="text-body-2 white--text text-center">
             ウィキペディア最短到達ゲーム
           </h1>
