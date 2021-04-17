@@ -53,25 +53,36 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="6">
-          <v-row justify="center"
-            ><v-img
-              :src="require('../assets/screenshot.png')"
-              contain
-              max-height="600"
-            >
-            </v-img>
+          <v-row justify="center">
+            <v-carousel hide-delimiters interval="4000" cycle>
+              <v-carousel-item
+                v-for="image in screenshots"
+                :key="image"
+                :src="image"
+                contain
+              ></v-carousel-item>
+            </v-carousel>
           </v-row>
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid>
+
+    <v-container fluid class="pt-8">
+      <v-row align-content="center">
+        <v-col>
+          <h2 class="text-md-h3 text-h4 black--text text-center">遊び方</h2>
+        </v-col>
+      </v-row>
+      <v-row class="pb-8">
+        <HowToPlay></HowToPlay>
+      </v-row>
       <v-row align-content="center">
         <v-col>
           <h2 class="text-md-h3 text-h4 black--text text-center">作者</h2>
         </v-col>
       </v-row>
       <v-row class="pb-8">
-        <AboutMeCard class="pt-8" :SNS_Links="icons"></AboutMeCard>
+        <AboutMeCard :SNS_Links="icons"></AboutMeCard>
       </v-row>
     </v-container>
   </div>
@@ -79,6 +90,7 @@
 
 <script>
 import AboutMeCard from "@/components/AboutMeCard";
+import HowToPlay from "../components/HowToPlay";
 // @ is an alias to /src
 
 export default {
@@ -98,8 +110,14 @@ export default {
         color: "red",
       },
     ],
+    screenshots: [
+      "/img/screenshot/screenshot0.png",
+      "/img/screenshot/screenshot1.png",
+      "/img/screenshot/screenshot2.png",
+      "/img/screenshot/screenshot3.png",
+    ],
   }),
-  components: { AboutMeCard },
+  components: { AboutMeCard, HowToPlay },
 };
 </script>
 
