@@ -30,7 +30,7 @@
           <v-row>
             <v-col cols="6">
               <a
-                href="https://play.google.com/store/apps/details?id=com.yasaidev.wiki_jump_game&pageId=104536201648276872752&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                href="https://play.google.com/store/apps/details?id=com.yasaidev.wiki_jump_game"
               >
                 <v-img
                   contain
@@ -40,9 +40,7 @@
               ></a>
             </v-col>
             <v-col cols="6">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.yasaidev.wiki_jump_game&pageId=104536201648276872752&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-              >
+              <a href="">
                 <v-img
                   contain
                   :height="$vuetify.breakpoint.xsOnly ? 40 : 60"
