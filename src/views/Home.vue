@@ -64,12 +64,21 @@
         </v-col>
       </v-row>
     </v-container>
-    <HomeContent class="pt-8" :SNS_Links="icons"></HomeContent>
+    <v-container fluid>
+      <v-row align-content="center">
+        <v-col>
+          <h2 class="text-md-h3 text-h4 black--text text-center">作者</h2>
+        </v-col>
+      </v-row>
+      <v-row class="pb-8">
+        <AboutMeCard class="pt-8" :SNS_Links="icons"></AboutMeCard>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
-import HomeContent from "@/components/HomeContent";
+import AboutMeCard from "@/components/AboutMeCard";
 // @ is an alias to /src
 
 export default {
@@ -90,7 +99,7 @@ export default {
       },
     ],
   }),
-  components: { HomeContent },
+  components: { AboutMeCard },
 };
 </script>
 
