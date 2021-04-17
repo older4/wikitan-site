@@ -11,23 +11,14 @@
       <v-row align="center">
         <v-col cols="12" md="6">
           <v-row justify="center"
-            ><v-img :src="require('../assets/title.png')" contain> </v-img>
+            ><v-img
+              @click="$router.push('/')"
+              :src="require('../assets/title.png')"
+              style="cursor: pointer"
+              contain
+            >
+            </v-img>
           </v-row>
-          <v-row justify="center">
-            <v-col cols="12">
-              <p
-                class="text-center text-md-h5 text-sm-h6 text-body-1 white--text font-weight-bold pt-5"
-              >
-                雑学が身につくアプリ
-              </p>
-              <p
-                class="text-center text-md-h5 text-sm-h6 text-body-1 font-weight-bold white--text"
-              >
-                自分だけの最短ルートを見つけろ！
-              </p>
-            </v-col>
-          </v-row>
-
           <v-row>
             <v-col cols="6">
               <a
@@ -55,5 +46,61 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container>
+      <v-row>
+        <v-col cols="12">
+          <h2
+            class="text-center text-md-h3 text-sm-h4 text-h5 black--text font-weight-bold"
+          >
+            お題
+          </h2></v-col
+        >
+        <v-col cols="12">
+          <TopicCard :startword="startword" :endword="endword"></TopicCard>
+        </v-col>
+      </v-row>
+      <v-row align="center" justify="center" align-content="center">
+        <StartButton
+          :startword="startword"
+          :endword="endword"
+          :lo="lo"
+        ></StartButton>
+      </v-row>
+    </v-container>
   </div>
 </template>
+
+<script>
+import TopicCard from "../components/TopicCard";
+import StartButton from "../components/StartButton";
+
+export default {
+  components: {
+    TopicCard: TopicCard,
+    StartButton: StartButton,
+  },
+  data() {
+    return {
+      startword: "",
+      endword: "",
+      lo: "",
+    };
+  },
+  mounted() {
+    if (
+      this.$route.query.start != undefined &&
+      this.$route.query.end != undefined &&
+      this.$route.query.lo != undefined
+    ) {
+      this.startword = this.$route.query.start;
+      this.endword = this.$route.query.end;
+      this.lo = this.$route.query.lo;
+    } else {
+      // this.$router.push("/");
+    }
+  },
+};
+</script>
+
+<style>
+</style>
