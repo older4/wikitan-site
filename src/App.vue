@@ -10,7 +10,12 @@
 
           <v-spacer></v-spacer>
 
-          <a :href="item.url" v-for="item in icons" :key="item.icon">
+          <a
+            :href="item.url"
+            v-for="item in icons"
+            :key="item.icon"
+            class="text-decoration-none"
+          >
             <v-icon size="24px" class="mx-4"> {{ item.icon }}</v-icon></a
           >
         </v-card-title>

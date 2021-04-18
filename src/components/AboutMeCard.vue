@@ -7,7 +7,7 @@
           :href="item.url"
           v-for="item in this.SNS_Links"
           :key="item.icon"
-          class="text-body-1 black--text pt-0"
+          class="text-body-1 black--text pt-0 text-decoration-none"
           cols="12"
           ><v-card-text class="text--primary py-0"
             ><v-icon size="24px" :color="item.color"> {{ item.icon }}</v-icon
