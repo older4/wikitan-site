@@ -9,12 +9,13 @@
       px-8
     >
       <v-row align="center">
-        <v-col cols="12" md="6">
+        <v-col cols="12">
           <v-row justify="center"
             ><v-img
               @click="$router.push('/')"
               :src="require('../assets/title.png')"
               style="cursor: pointer"
+              max-height="200"
               contain
             >
             </v-img>

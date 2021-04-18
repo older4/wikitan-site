@@ -57,6 +57,8 @@
                 v-for="image in screenshots"
                 :key="image"
                 :src="image"
+                width="100%"
+                max-height="auto"
                 contain
               ></v-carousel-item>
             </v-carousel>
