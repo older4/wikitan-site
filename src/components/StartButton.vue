@@ -48,7 +48,7 @@ export default {
           this.startword
         )}&end=${encodeURIComponent(this.endword)}&lo=jp`;
         window.open(
-          `${launch_uri}#Intent;scheme=wikitan;package=com.yasaidev.wiki_jump_game;S.browser_fallback_url=https://wikitan.yasaidev.work;end`,
+          `${launch_uri}#Intent;scheme=wikitan;package=com.yasaidev.wiki_jump_game;end`,
           "_blank"
         );
       }
