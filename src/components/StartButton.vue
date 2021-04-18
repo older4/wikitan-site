@@ -26,11 +26,32 @@ export default {
   },
   methods: {
     launchApp() {
-      const launch_uri = new URL("", "wikitan://topic");
-      launch_uri.searchParams.append("start", this.startword);
-      launch_uri.searchParams.append("end", this.endword);
-      launch_uri.searchParams.append("lo", this.lo);
-      window.open(launch_uri.href, "_blank");
+      // ios
+      if (
+        [
+          "iPad Simulator",
+          "iPhone Simulator",
+          "iPod Simulator",
+          "iPad",
+          "iPhone",
+          "iPod",
+        ].includes(navigator.platform)
+      ) {
+        const launch_uri = `wikitan://topic?start=${encodeURIComponent(
+          this.startword
+        )}&end=${encodeURIComponent(this.endword)}&lo=jp`;
+        window.open(launch_uri.href, "_blank");
+      }
+      // android
+      else {
+        const launch_uri = `intent://topic?start=${encodeURIComponent(
+          this.startword
+        )}&end=${encodeURIComponent(this.endword)}&lo=jp`;
+        window.open(
+          `${launch_uri}#Intent;scheme=wikitan;package=com.yasaidev.wiki_jump_game;S.browser_fallback_url=https://wikitan.yasaidev.work;end`,
+          "_blank"
+        );
+      }
     },
   },
 };
