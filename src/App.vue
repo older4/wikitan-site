@@ -21,7 +21,15 @@
         </v-card-title>
 
         <v-card-text class="py-2 white--text text-center">
-          {{ new Date().getFullYear() }} — <strong>YasaiDev/電気野菜</strong>
+          <span>{{ new Date().getFullYear() }}</span> —
+          <strong>YasaiDev/電気野菜</strong> |
+          <span
+            ><a
+              @click="$router.push(`/policy`)"
+              class="text-decoration-none white--text"
+              >プライバシーポリシー</a
+            ></span
+          >
           <h1 class="text-body-2 white--text text-center">
             ウィキペディア最短到達ゲーム
           </h1>
