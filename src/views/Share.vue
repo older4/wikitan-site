@@ -97,6 +97,22 @@ export default {
     } else {
       this.$router.push("/");
     }
+    document
+      .querySelector("meta[property='og:image']")
+      .setAttribute(
+        "content",
+        `https://res.cloudinary.com/yasaidev/image/upload/q_80/c_fit,h_200,l_text:Sawarabi%20Gothic_64:${encodeURIComponent(
+          this.startword
+        )},co_rgb:252525,w_937,y_-150/c_fit,h_200,l_text:Sawarabi%20Gothic_64:${encodeURIComponent(
+          this.endword
+        )},co_rgb:252525,w_937,y_90/v1619020654/%E3%82%A6%E3%82%A3%E3%82%AD%E7%9F%AD/wikitan_twitter_card_cla0hs.png`
+      );
+    document
+      .querySelector("meta[property='og:description']")
+      .setAttribute(
+        "content",
+        `${this.startword}から${this.endword}にあなたはいけますか？`
+      );
   },
 };
 </script>
