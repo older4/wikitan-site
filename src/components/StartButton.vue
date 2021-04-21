@@ -40,7 +40,7 @@ export default {
         const launch_uri = `wikitan://topic?start=${encodeURIComponent(
           this.startword
         )}&end=${encodeURIComponent(this.endword)}&lo=jp`;
-        window.open(launch_uri.href, "_blank");
+        document.location = launch_uri;
       }
       // android
       else {
