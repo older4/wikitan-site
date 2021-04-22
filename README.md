@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7fc2177b-8960-4644-9bd2-c6b88ed78a4b/deploy-status)](https://app.netlify.com/sites/festive-hamilton-bd34bd/deploys)
+
 # wikitan
 
 ## Project setup
