@@ -27,43 +27,11 @@
               </p>
             </v-col>
           </v-row>
-          <v-row>
-            <v-col cols="6">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.yasaidev.wiki_jump_game"
-              >
-                <v-img
-                  contain
-                  :height="$vuetify.breakpoint.xsOnly ? 40 : 60"
-                  :src="require('../assets/googleplay.png')"
-                ></v-img
-              ></a>
-            </v-col>
-            <v-col cols="6">
-              <a
-                href="https://apps.apple.com/jp/app/%E3%82%A6%E3%82%A3%E3%82%AD%E6%9C%80%E7%9F%AD%E5%88%B0%E9%81%94%E3%82%B2%E3%83%BC%E3%83%A0-%E3%82%A6%E3%82%A3%E3%82%AD%E7%9F%AD/id1563872394"
-              >
-                <v-img
-                  contain
-                  :height="$vuetify.breakpoint.xsOnly ? 40 : 60"
-                  :src="require('../assets/appstore.png')"
-                ></v-img>
-              </a>
-            </v-col>
-          </v-row>
+          <AppStoreButton></AppStoreButton>
         </v-col>
         <v-col cols="12" md="6">
           <v-row justify="center">
-            <v-carousel hide-delimiters interval="4000" cycle>
-              <v-carousel-item
-                v-for="image in screenshots"
-                :key="image"
-                :src="image"
-                width="100%"
-                max-height="auto"
-                contain
-              ></v-carousel-item>
-            </v-carousel>
+            <ScreenShotCarousel></ScreenShotCarousel>
           </v-row>
         </v-col>
       </v-row>
@@ -93,6 +61,8 @@
 <script>
 import AboutMeCard from "@/components/AboutMeCard";
 import HowToPlay from "../components/HowToPlay";
+import ScreenShotCarousel from "../components/ScreenShotCarousel";
+import AppStoreButton from "../components/AppStoreButton";
 // @ is an alias to /src
 
 export default {
@@ -111,15 +81,15 @@ export default {
         name: "電気野菜チャンネル",
         color: "red",
       },
-    ],
-    screenshots: [
-      "/img/screenshot/screenshot0.png",
-      "/img/screenshot/screenshot1.png",
-      "/img/screenshot/screenshot2.png",
-      "/img/screenshot/screenshot3.png",
+      {
+        icon: "mdi-home",
+        url: "https://yasaidev.work",
+        name: "電気野菜 Logs",
+        color: "gray",
+      },
     ],
   }),
-  components: { AboutMeCard, HowToPlay },
+  components: { AboutMeCard, HowToPlay, ScreenShotCarousel, AppStoreButton },
 };
 </script>
 
