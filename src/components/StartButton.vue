@@ -46,7 +46,7 @@ export default {
             window.location =
               "https://apps.apple.com/jp/app/%E3%82%A6%E3%82%A3%E3%82%AD%E6%9C%80%E7%9F%AD%E5%88%B0%E9%81%94%E3%82%B2%E3%83%BC%E3%83%A0-%E3%82%A6%E3%82%A3%E3%82%AD%E7%9F%AD/id1563872394";
           }
-        }, 25);
+        }, 3000);
         document.location = launch_uri;
       }
       // android
