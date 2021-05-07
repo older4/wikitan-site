@@ -31,7 +31,7 @@
             ></span
           >
           <h1 class="text-body-2 white--text text-center">
-            ウィキペディア最短到達ゲーム
+            競技ウィキペディア
           </h1>
         </v-card-text>
       </v-card>
