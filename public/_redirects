@@ -1,1 +1,6 @@
 /*    /index.html   200
+https://wikitan.netlify.app/* https://wikitan.yasai.dev/:splat 301!
+http://wikitan.netlify.app/* https://wikitan.yasai.dev/:splat 301!
+
+https://wikitan.yasaidev.work/* https://wikitan.yasai.dev/:splat 301!
+http://wikitan.yasaidev.work/* https://wikitan.yasai.dev/:splat 301!
